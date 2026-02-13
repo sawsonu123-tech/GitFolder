@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be My Valentine ❤️</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* BODY */
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff4d6d,#ff8fa3,#fff0f3);
+    background-size:300% 300%;
+    animation:bgMove 8s ease infinite;
+    overflow:hidden;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* CARD */
+.container{
+    text-align:center;
+    background:rgba(255,255,255,0.95);
+    padding:45px 35px;
+    width:90%;
+    max-width:420px;
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(255,77,109,0.3);
+    animation:popIn .5s ease;
+}
+
+/* POP ANIMATION */
+@keyframes popIn{
+    from{
+        transform:scale(.9);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* HEADING */
+h1{
+    color:#ff2f5e;
+    font-size:2rem;
+    margin-bottom:30px;
+}
+
+/* BUTTON GROUP */
+.btn-group{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+/* BUTTON BASE */
+button{
+    padding:14px 36px;
+    border:none;
+    border-radius:50px;
+    font-size:1.1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+/* YES BUTTON */
+#yesBtn{
+    background:linear-gradient(135deg,#ff4d6d,#ff758f);
+    color:white;
+    box-shadow:0 8px 20px rgba(255,77,109,.4);
+}
+
+#yesBtn:hover{
+    transform:scale(1.1);
+}
+
+/* NO BUTTON */
+#noBtn{
+    background:#f5f5f5;
+    color:#444;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    will-change:transform;
+}
+
+/* SUCCESS SCREEN */
+#success {
+    background: #ffffff;
+    color: #d90429;
+}
+
+#success h1 {
+    color: #d90429;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+#success p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* HIDDEN */
+.hidden{
+    display:none;
+}
+
+/* MOBILE */
+@media(max-width:480px){
+
+    h1{
+        font-size:1.6rem;
+    }
+
+    button{
+        font-size:1rem;
+        padding:12px 28px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MAIN SCREEN -->
+<div class="container" id="main">
+
+    <h1>Will you be my Valentine? 💖</h1>
+
+    <div class="btn-group">
+
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+
+    </div>
+
+</div>
+
+
+<!-- SUCCESS SCREEN -->
+<div class="container hidden" id="success">
+
+    <h1>Yay! ❤️</h1>
+
+    <p>I knew you'd say YES 😌💖<br>
+    See you soon!</p>
+
+</div>
+
+
+
+<script>
+
+/* ELEMENTS */
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const main = document.getElementById("main");
+const success = document.getElementById("success");
+
+/* SETTINGS */
+const keepDistance = 140;
+
+/* VARIABLES */
+let btnX = 0;
+let btnY = 0;
+let mouseX = 0;
+let mouseY = 0;
+let raf = null;
+
+
+/* GET BUTTON POSITION ONCE */
+function updateBtnPos(){
+
+    const rect = noBtn.getBoundingClientRect();
+
+    btnX = rect.left + rect.width/2;
+    btnY = rect.top + rect.height/2;
+}
+
+updateBtnPos();
+window.addEventListener("resize", updateBtnPos);
+
+
+/* TRACK MOUSE */
+document.addEventListener("mousemove", e =>{
+
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    if(!raf){
+        raf = requestAnimationFrame(moveBtn);
+    }
+
+});
+
+
+/* MOVE BUTTON */
+function moveBtn(){
+
+    const dx = btnX - mouseX;
+    const dy = btnY - mouseY;
+
+    const dist = Math.sqrt(dx*dx + dy*dy);
+
+    if(dist < keepDistance){
+
+        const angle = Math.atan2(dy, dx);
+
+        const moveX = Math.cos(angle) * (keepDistance - dist);
+        const moveY = Math.sin(angle) * (keepDistance - dist);
+
+        noBtn.style.transform =
+            `translate3d(${moveX}px,${moveY}px,0)`;
+
+    }else{
+
+        noBtn.style.transform =
+            "translate3d(0,0,0)";
+
+    }
+
+    raf = null;
+}
+
+
+/* YES CLICK */
+yesBtn.addEventListener("click", ()=>{
+
+    main.classList.add("hidden");
+    success.classList.remove("hidden");
+
+    document.body.style.background =
+        "linear-gradient(135deg,#ff4d6d,#ff8fa3)";
+});
+
+</script>
+
+</body>
+</html>

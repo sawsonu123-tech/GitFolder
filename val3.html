@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Favorite Human</title>
+    <style>
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #b5173f;
+}
+
+/* Main Container - Glass Effect */
+#vault-container {
+    width: 90%;
+    max-width: 420px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.3);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+
+    animation: popIn 0.8s ease;
+}
+
+/* Entrance Animation */
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Lock Screen */
+#lock-screen {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Headings */
+h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+p {
+    opacity: 0.85;
+    font-size: 0.95rem;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Input */
+input {
+    width: 110px;
+    padding: 12px;
+
+    border-radius: 10px;
+    border: 2px solid transparent;
+
+    background: rgba(255,255,255,0.7);
+
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff4d6d;
+    box-shadow: 0 0 10px #ff4d6d;
+    background: white;
+}
+
+/* Button */
+button {
+    padding: 12px 22px;
+
+    background: linear-gradient(135deg, #ff4d6d, #c9184a);
+
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 15px rgba(255,77,109,0.4);
+
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(255,77,109,0.6);
+}
+
+/* Secret Content */
+#secret-content {
+    display: none;
+    animation: fadeIn 1s ease;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title */
+#secret-content h1 {
+    font-size: 1.9rem;
+    margin-bottom: 8px;
+}
+
+/* Quotes */
+.love-quote {
+    margin: 12px 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ff4d6d;
+    line-height: 1.4;
+}
+
+/* Image */
+.responsive-img {
+    width: 100%;
+    max-width: 280px;
+    margin: 20px auto 0;
+
+    border-radius: 18px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+
+    transition: transform 0.4s ease;
+}
+
+.responsive-img:hover {
+    transform: scale(1.05);
+}
+
+/* Floating Hearts */
+.heart {
+    position: absolute;
+    font-size: 1.6rem;
+
+    color: #ff4d6d;
+
+    animation: float 4s linear infinite;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Heart Animation */
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-15vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Mobile Friendly */
+@media (max-width: 480px) {
+
+    #vault-container {
+        padding: 2rem 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    #secret-content h1 {
+        font-size: 1.6rem;
+    }
+
+    input {
+        width: 90px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+    <div id="vault-container">
+        <div id="lock-screen">
+            <h2>Enter our Anniversary Date to Unlock</h2>
+            <p>(Format: MMDD)</p>
+            <div class="input-group">
+                <input type="text" id="passcode" placeholder="0000" maxlength="4">
+                <button onclick="checkPasscode()">Unlock</button>
+            </div>
+        </div>
+
+        <div id="secret-content">
+            <h1>Happy Valentine's Day! ❤️</h1>
+            <p>You are my favorite person in the world.</p>
+            
+            <div class="love-quote"><i>"I love you more than the last slice of pizza!"</i></div>
+          <!--  <div class="love-quote"><i>"I love you more than the 'skip ad' button."</i></div>
+           <div class="love-quote"><i>"I love you more than sleeping in on Saturdays."</i></div> -->
+            <img src="C:\Users\sawvi\Downloads\img3.png" alt="Our Photo" class="responsive-img">
+        </div>
+    </div>
+
+    <script>
+        function checkPasscode() {
+            const code = document.getElementById('passcode').value;
+            // Access granted if code matches
+            if (code === "5928") { 
+                document.getElementById('lock-screen').style.display = 'none';
+                document.getElementById('secret-content').style.display = 'block';
+                startHearts();
+            } else {
+                alert("Try again! Hint: The day we made it official.");
+            }
+        }
+
+        function startHearts() {
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.classList.add('heart');
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+                document.body.appendChild(heart);
+                
+                // Clean up hearts to prevent lag
+                setTimeout(() => heart.remove(), 4000);
+            }, 300);
+        }
+
+        // Allow pressing "Enter" to unlock
+        document.getElementById("passcode").addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                checkPasscode();
+            }
+        });
+    </script>
+</body>
+</html>
