@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Generator</title>
+</head>
+<body>
+
+    <h2>Fibonacci Sequence Generator</h2>
+
+    <input type="number" id="num" placeholder="Enter a number">
+    <button onclick="generate()">Generate</button>
+
+    <p id="result"></p>   <!-- Changed output → result -->
+
+<script>
+function generate() {
+
+    let n = document.getElementById("num").value;
+    let result = document.getElementById("result");
+
+    if (n === "" || n <= 0) {
+        result.innerHTML = "Please enter a valid number!";
+        return;
+    }
+
+    n = parseInt(n);
+
+    let fib = [0, 1];
+
+    for (let i = 2; i < n; i++) {
+        fib[i] = fib[i-1] + fib[i-2];
+    }
+
+    result.innerHTML = "Sequence: " + fib.slice(0, n).join(", ");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+<div id="container">
+
+    <h2>Student Registration Form</h2>
+
+    <form id="myForm" onsubmit="return validateForm()">
+
+        <label>Name:</label>
+        <input type="text" id="name" maxlength="10">
+        <span class="error" id="nameError"></span>
+
+        <label>Age:</label>
+        <input type="number" id="age" min="1" max="100" onblur="autoYOB()">
+        <span class="error" id="ageError"></span>
+
+        <label>Gender:</label>
+        <div class="radio-group">
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+        </div>
+        <span class="error" id="genderError"></span>
+
+        <!-- Year of Birth -->
+        <label>Year of Birth:</label>
+        <input type="number" id="yob">
+        <span class="error" id="yobError"></span>
+
+        <!-- Address -->
+        <label>Address:</label>
+        <textarea id="address" rows="3" maxlength="45"></textarea>
+        <span class="error" id="addressError"></span>
+
+        <label>Mobile:</label>
+        <input type="text" id="mobile" maxlength="10">
+        <span class="error" id="mobileError"></span>
+
+        <!-- Some States are shown and Karnataka is selected as default -->
+        <label>State:</label>
+        <select id="state">
+            <option value="">Select</option>
+            <option value="KARNATAKA" selected>KARNATAKA</option>
+            <option value="MAHARASHTRA">MAHARASHTRA</option>
+            <option value="DELHI">DELHI</option>
+            <option value="TAMIL NADU">TAMIL NADU</option>
+        </select>
+        <span class="error" id="stateError"></span>
+
+        <!-- Email: @ is must-->
+        <label>Email:</label>
+        <input type="email" id="email" onblur="generateID()">
+        <span class="error" id="emailError"></span>
+
+        <!-- Student ID: Automatcally get from email id -->
+        <label>Student ID:</label>
+        <input type="text" id="studentId" readonly>
+        <span class="error" id="idError"></span>
+
+        <!-- Password hidden as * -->
+        <label>Password:</label>
+        <input type="password" id="password">
+        <span class="error" id="passwordError"></span>
+        <span class="success" id="passwordSuccess"></span>
+
+        <!-- Confirm Password must match with Password -->
+        <label>Confirm Password:</label>
+        <input type="password" id="confirmPassword">
+        <span class="error" id="confirmError"></span>
+        <span class="success" id="confirmSuccess"></span>
+
+        <!-- Final Success msg -->
+        <p id="finalSuccess" class="success"></p>
+
+        <!-- Buttons -->
+        <div class="btn-group">
+            <input type="submit" value="Submit" class="btn submit">
+            <input type="reset" value="Reset" class="btn reset">
+        </div>
+
+    </form>
+
+</div>
+
+
+<footer class="footer123">
+    Developed by Your_Name | BITS ID: 19556wd12345
+</footer>
+
+</body>
+</html>

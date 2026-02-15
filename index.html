@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background: #f4f4f4;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            background: #007bff;
+            color: white;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Select Which Page to Open</h2>
+
+    <button onclick="openPage('val1.html')">Open Val1</button>
+    <button onclick="openPage('val2.html')">Open Val2</button>
+    <button onclick="openPage('val3.html')">Open Val3</button>
+
+    <script>
+        function openPage(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>

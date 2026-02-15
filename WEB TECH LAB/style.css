@@ -1,0 +1,167 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #e1ff9a, #ff6e6e);
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 520px;
+    margin: 40px auto;
+    background: #d7d7d7;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 255, 2, 0.4);
+    border: 2px solid #7500b4;
+}
+
+h2 {
+    text-align: center;
+    color: #ff2828;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #f32f60;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #000000;
+}
+
+input, textarea, select {
+    padding: 9px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1.5px solid #ff7d9d;
+    font-size: 14px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #ff4d6d;
+    box-shadow: 0 0 6px rgba(255, 77, 109, 0.6);
+}
+
+.radio-group {
+    margin-top: 6px;
+    color: #000000;
+}
+
+.btn-group {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 28px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+
+
+
+/* Submit Button PINKISH BUTTONS */
+.submit {
+    background: linear-gradient(to right, #ff4d6d, #c9184a);
+}
+
+.submit:hover {
+    background: linear-gradient(to right, #c9184a, #ff4d6d);
+    transform: scale(1.05);
+}
+
+/* Reset Button */
+.reset {
+    background: linear-gradient(to right, #ff758f, #ffb3c6);
+}
+
+.reset:hover {
+    background: linear-gradient(to right, #ffb3c6, #ff758f);
+    transform: scale(1.05);
+}
+
+
+
+
+/*
+.submit {
+    background-color: #042f0e;
+    color: white;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #51ec75; 
+    transform: scale(1.05);
+}
+
+.reset {
+    background-color: #570911; 
+    color: white;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.reset:hover {
+    background-color: #d12d00; 
+    transform: scale(1.05);
+}
+
+*/
+
+.error {
+    color: #d00000;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.success {
+    color: #007f5f;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#name { background: #fff0f5; }
+#age { background: #fff5f7; }
+#yob { background: #f0fff4; }
+#mobile { background: #fff1f3; }
+#email { background: #f0f8ff; }
+
+textarea {
+    background: #fff5fa;
+}
+
+select {
+    background: #fff7fb;
+}
+
+.footer123 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to right, #800f2f, #c8c8c8);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.3);
+}
