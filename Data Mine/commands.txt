@@ -1,4 +1,13 @@
-python -m pip install numpy scikit-learn
-python -c "import numpy, sklearn; print('Installed OK')"
-python -m pip install pandas
-python -m pip install mlxtend
+python3 --version
+If it shows Python 3.x → good.
+
+if not then install python
+sudo dnf install python3
+
+sudo dnf install python3-pip
+python3 -m pip install numpy scikit-learn
+python3 -c "import numpy, sklearn; print('Installed OK')"
+python3 -m pip install pandas
+python3 -m pip install mlxtend
+python3 -m pip install --user numpy scikit-learn pandas mlxtend
+pip install numpy scikit-learn pandas mlxtend
