@@ -1,3 +1,7 @@
+
+// All below commands are to be executed on terminal of osha lab.
+
+
 python3 --version
 If it shows Python 3.x → good.
 
