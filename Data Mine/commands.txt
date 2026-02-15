@@ -1,0 +1,4 @@
+python -m pip install numpy scikit-learn
+python -c "import numpy, sklearn; print('Installed OK')"
+python -m pip install pandas
+python -m pip install mlxtend
