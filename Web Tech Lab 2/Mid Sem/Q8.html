@@ -1,45 +1,137 @@
-<!-- Q.1.a. Demonstrate an HTML5 document to describe an ordered list of four states.
-Each element of the list must have an unordered list of at least two cities. -->
+<!-- 5. Create a webpage to manage personal details like name, class, qualifications, photo, address etc.,
+using tables and other suitable HTML tags. Apply the following style information using external
+style sheet: (10M)
+• Display the heading of the page in Arial font and with 20px size.
+• Align all the field names like Name, Class, Photo etc to right in the table.
+• Apply light blue as background color for the left side cells in the table which contains
+field names like Name, Class etc...
+• Also display your college logo as background image in the top right position of the
+web page. -->
+
+<!-- Personal Details Page using Table and External CSS -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>States and Cities</title>
+    <title>Personal Details</title>
+
+    <!-- External CSS -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+<style>
+
+body {
+    background-image: url("logo.png");   /* Your college logo */
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 120px;
+    margin: 40px;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Heading styling */
+
+h2 {
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Table styling */
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td {
+    padding: 10px;
+}
+
+
+/* Left-side labels */
+
+.label {
+    text-align: right;              /* Right aligned */
+    background-color: lightblue;   /* Light blue background */
+    font-weight: bold;
+}
+
+
+/* Input styling */
+
+input, select, textarea {
+    padding: 5px;
+    font-size: 14px;
+}
+</style>
 </head>
 <body>
 
-    <h2>States and Their Cities</h2>
+    <h2>Registration Form</h2>
 
-    <ol>
-        <li>Maharashtra
-            <ul>
-                <li>Mumbai</li>
-                <li>Pune</li>
-            </ul>
-        </li>
+    <form>
 
-        <li>Karnataka
-            <ul>
-                <li>Bengaluru</li>
-                <li>Mysuru</li>
-            </ul>
-        </li>
+        <table>
 
-        <li>Gujarat
-            <ul>
-                <li>Ahmedabad</li>
-                <li>Surat</li>
-            </ul>
-        </li>
+            <tr>
+                <td class="label">Name:</td>
+                <td><input type="text" name="name"></td>
+            </tr>
 
-        <li>Tamil Nadu
-            <ul>
-                <li>Chennai</li>
-                <li>Coimbatore</li>
-            </ul>
-        </li>
-    </ol>
+            <tr>
+                <td class="label">Class:</td>
+                <td>
+                    <select>
+                        <option>I Year</option>
+                        <option>II Year</option>
+                        <option>III Year</option>
+                        <option>IV Year</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Qualification:</td>
+                <td>
+                    <select>
+                        <option>B.Tech</option>
+                        <option>M.Tech</option>
+                        <option>MCA</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Email ID:</td>
+                <td><input type="email"></td>
+            </tr>
+
+            <tr>
+                <td class="label">Address:</td>
+                <td><textarea rows="4" cols="30"></textarea></td>
+            </tr>
+
+            <tr>
+                <td class="label">Upload Photo:</td>
+                <td><input type="file"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Clear">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
 
 </body>
 </html>

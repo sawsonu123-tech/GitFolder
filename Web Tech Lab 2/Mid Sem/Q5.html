@@ -1,45 +1,40 @@
-<!-- Q.1.a. Demonstrate an HTML5 document to describe an ordered list of four states.
-Each element of the list must have an unordered list of at least two cities. -->
+<!-- Q.6. Registration Form -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>States and Cities</title>
+    <title>Registration Form</title>
 </head>
 <body>
 
-    <h2>States and Their Cities</h2>
+    <h1>Registration Form</h1>
 
-    <ol>
-        <li>Maharashtra
-            <ul>
-                <li>Mumbai</li>
-                <li>Pune</li>
-            </ul>
-        </li>
+    <form>
 
-        <li>Karnataka
-            <ul>
-                <li>Bengaluru</li>
-                <li>Mysuru</li>
-            </ul>
-        </li>
+        <!-- Name -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
-        <li>Gujarat
-            <ul>
-                <li>Ahmedabad</li>
-                <li>Surat</li>
-            </ul>
-        </li>
+        <!-- Age -->
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" min="1" required><br><br>
 
-        <li>Tamil Nadu
-            <ul>
-                <li>Chennai</li>
-                <li>Coimbatore</li>
-            </ul>
-        </li>
-    </ol>
+        <!-- Gender -->
+        <label>Gender:</label><br>
+
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <br><br>
+
+        <!-- Submit -->
+        <input type="submit" value="Submit">
+
+    </form>
 
 </body>
 </html>

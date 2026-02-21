@@ -1,45 +1,68 @@
-<!-- Q.1.a. Demonstrate an HTML5 document to describe an ordered list of four states.
-Each element of the list must have an unordered list of at least two cities. -->
+<!-- b).What is a Zone? (1 Mark)
+Answer:
+A Zone is a logical portion or area of a web page that is defined to organize and structure
+content separately.
+In web development, a zone is usually created using HTML elements such as:
+<div>
+<section>
+<header>
+<footer>
+<article>
+Each zone is used to group related content and apply specific styling or functionality. -->
+
+<div id="header1">
+ <h1>Website Header Zone</h1>
+</div>
+<div id="content2">
+ <p>Main Content Zone</p>
+</div>
+<div id="footer3">
+ <p>Footer Zone</p>
+</div>
+
+
+<br><br>
+
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>States and Cities</title>
+    <title>Div Layout Example</title>
+<div><p style="text-align: center; font-weight: bold;">Below is better example with colours to demonstrate</p></div>
+    <style>
+        #header {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #content {
+            background-color: lightgray;
+            height: 200px;
+            padding: 20px;
+        }
+
+        #footer {
+            background-color: lightgreen;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+
 </head>
 <body>
 
-    <h2>States and Their Cities</h2>
+    <div id="header">
+        <h1>Website Header Zone</h1>
+    </div>
 
-    <ol>
-        <li>Maharashtra
-            <ul>
-                <li>Mumbai</li>
-                <li>Pune</li>
-            </ul>
-        </li>
+    <div id="content">
+        <p>Main Content Zone</p>
+    </div>
 
-        <li>Karnataka
-            <ul>
-                <li>Bengaluru</li>
-                <li>Mysuru</li>
-            </ul>
-        </li>
-
-        <li>Gujarat
-            <ul>
-                <li>Ahmedabad</li>
-                <li>Surat</li>
-            </ul>
-        </li>
-
-        <li>Tamil Nadu
-            <ul>
-                <li>Chennai</li>
-                <li>Coimbatore</li>
-            </ul>
-        </li>
-    </ol>
+    <div id="footer">
+        <p>Footer Zone</p>
+    </div>
 
 </body>
 </html>
