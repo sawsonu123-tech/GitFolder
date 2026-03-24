@@ -1,0 +1,215 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #e1ff9a, #ff6e6e);
+    margin: 0;
+    padding: 0 0 90px;
+}
+/* Bits ID: 1956www12345 - Heera Thakur */
+.page-header {
+    width: 100%;
+    padding: 22px 16px;
+    background: linear-gradient(to right, #4a0d67, #7b2cbf);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+#container {
+    width: min(720px, calc(100vw - 32px));
+    margin: 32px auto 40px;
+    background: #d7d7d7;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 255, 2, 0.4);
+    border: 2px solid #7500b4;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 34px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    text-align: center;
+    color: #ff2828;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px #f32f60;
+}
+
+h3 {
+    margin-top: 28px;
+    color: #7500b4;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #000000;
+}
+
+input, textarea, select {
+    padding: 9px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1.5px solid #ff7d9d;
+    font-size: 14px;
+    background: #fff;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #ff4d6d;
+    box-shadow: 0 0 6px rgba(255, 77, 109, 0.6);
+}
+
+.radio-group {
+    margin-top: 6px;
+    color: #000000;
+}
+
+.btn-group {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.btn {
+    min-width: 170px;
+    padding: 12px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: white;
+    cursor: pointer;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.16);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.submit {
+    background: linear-gradient(135deg, #ef476f, #d90429);
+}
+
+.submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 24px rgba(217, 4, 41, 0.28);
+    filter: brightness(1.05);
+}
+
+.reset {
+    background: linear-gradient(135deg, #6c757d, #495057);
+}
+/* Bits ID: 1956www12345 - Heera Thakur */
+.reset:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 24px rgba(73, 80, 87, 0.28);
+    filter: brightness(1.05);
+}
+
+.export {
+    background: linear-gradient(135deg, #5a189a, #7b2cbf);
+}
+
+.export:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 24px rgba(90, 24, 154, 0.3);
+    filter: brightness(1.05);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16);
+}
+
+.btn:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.85);
+    outline-offset: 3px;
+}
+
+.error {
+    color: #d00000;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.success {
+    color: #007f5f;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#name { background: #fff0f5; }
+#age { background: #fff5f7; }
+#yob { background: #f0fff4; }
+#mobile { background: #fff1f3; }
+#email { background: #f0f8ff; }
+
+textarea {
+    background: #fff5fa;
+}
+
+select {
+    background: #fff7fb;
+}
+
+.registration-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.registration-table th,
+.registration-table td {
+    padding: 12px;
+    border: 1px solid #f1c4d2;
+    text-align: left;
+}
+/* Bits ID: 1956www12345 - Heera Thakur */
+.registration-table th {
+    background: linear-gradient(to right, #ff4d6d, #c9184a);
+    color: #ffffff;
+}
+
+.registration-table tbody tr:nth-child(even) {
+    background: #fff5f8;
+}
+
+.registration-table tbody tr:hover {
+    background: #ffe3eb;
+}
+
+.footer123 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #800f2f, #c8c8c8);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.3);
+}
+/* Bits ID: 1956www12345 - Heera Thakur */
+.footer123 p {
+    margin: 0;
+}
