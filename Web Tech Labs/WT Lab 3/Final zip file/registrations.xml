@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<registrations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="registrations.xsd">
+    <registration>
+        <studentId>-32</studentId>
+        <studentName>dfs</studentName>
+        <courseCode>fds</courseCode>
+        <courseTitle></courseTitle>
+        <semester></semester>
+    </registration>
+    <registration>
+        <studentId>abc</studentId>
+        <studentName>dsf</studentName>
+        <courseCode>dfs</courseCode>
+        <courseTitle>dfs</courseTitle>
+        <semester>dsf</semester>
+    </registration>
+</registrations>
