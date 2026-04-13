@@ -1,6 +1,6 @@
 <?php
-// Student ID: YOUR_ID
-// Student Name: YOUR_NAME
+// Student ID: 1956www42345
+// Student Name: Heera Thakur
 
 include "db.php";
 

@@ -1,4 +1,7 @@
 <?php
+// Student ID: 1956www42345
+// Student Name: Heera Thakur
+
 include "db.php";
 
 // Fetch data using JOIN

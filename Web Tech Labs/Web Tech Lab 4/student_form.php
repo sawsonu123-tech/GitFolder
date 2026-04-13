@@ -1,6 +1,6 @@
 <?php
-// Student ID: YOUR_ID
-// Student Name: YOUR_NAME
+// Student ID: 1956www42345
+// Student Name: Heera Thakur
 
 include "db.php";
 ?>
@@ -75,7 +75,7 @@ include "db.php";
 </div>
 
 <footer id="main-footer">
-    <p>ID: <b>YOUR_STUDENT_ID</b>; Name: <b>YOUR_NAME</b></p>
+    <p>ID: <b>1956www42345</b> | Name: <b>Heera Thakur</b></p>
 </footer>
 
 </body>
